@@ -11,6 +11,7 @@ const stats = [
     count:         '28,450+',
     subText:       'Thousands joining the ultimate entertainment experience!',
     bgColor:       'bg-secondary',
+    alt: "Butterfly",
   },
   {
     backgroundSrc: '/icons/FlowerBack.png',
@@ -19,6 +20,8 @@ const stats = [
     count:         '$1,375,620',
     subText:       'Fans contributing to an unforgettable event with SCF!',
     bgColor:       'bg-secondary',
+    alt: "Flower",
+
   },
 ]
 
@@ -31,9 +34,9 @@ export default function TotalTicketSection() {
       <div className="relative z-10 flex flex-col w-full justify-evenly items-center gap-12">
         {/* Header */}
         <div className="text-black flex flex-col justify-center items-center max-w-[730px] text-center px-4">
-          <h1 className="text-[28px] font-bold uppercase">
+          <h2 className="text-[28px] font-bold uppercase">
             SFC 2025: Witness the Energy Unfold!
-          </h1>
+          </h2>
           <p className="text-[16px] font-normal max-w-[575px]">
             Our event is growing bigger each year! Check out the latest stats of
             ticket sales and revenue.
@@ -51,6 +54,7 @@ export default function TotalTicketSection() {
               count={stat.count}
               subText={stat.subText}
               bgColor={stat.bgColor}
+              alt={stat.alt}
             />
           ))}
         </div>

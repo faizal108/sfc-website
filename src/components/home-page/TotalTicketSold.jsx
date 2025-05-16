@@ -8,6 +8,7 @@ export default function TotalTicketSold({
   count,
   subText,
   bgColor = 'bg-secondary',
+  alt="icon"
 }) {
   return (
     <div className={`relative flex-grow min-w-80 sm:min-h-[240px] min-h-[200px] ${bgColor} rounded-tr-[40px] rounded-bl-[40px] flex justify-start items-center px-5 py-6 overflow-hidden`}>
@@ -16,7 +17,7 @@ export default function TotalTicketSold({
         <div className="absolute top-[30px] right-[30px] w-24 h-24">
           <Image
             src={backgroundImage}
-            alt=""
+            alt={alt}
             fill
             className="object-contain"
           />
@@ -27,7 +28,7 @@ export default function TotalTicketSold({
       <div className="flex gap-x-[25px]">
         {iconImage && (
           <div className="w-[50px] h-[50px] relative">
-            <Image src={iconImage} alt="" fill className="object-contain" />
+            <Image src={iconImage} alt={alt} fill className="object-contain" />
           </div>
         )}
         <div className="text-white w-[350px]">
