@@ -1,4 +1,8 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./MaskStyle.css";
 
 :root {
   --background: #ffffff;
@@ -23,4 +27,66 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-links {
+  position: relative;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.navbar-links::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #0005A3;
+  transition: width 0.3s ease;
+}
+
+.navbar-links:hover,
+.navbar-links.active {
+  color: #0005A3;
+}
+
+.navbar-links:hover::after,
+.navbar-links.active::after {
+  width: 100%;
+}
+
+
+body {
+  background-color: #231e20;
+  font-family: "Poppins", "sans-serif";
+}
+/* .event-experience{
+  background-image: url("./assets//photos/ticket-form-bg.png");
+} */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Scrollbar customization */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.25);
 }
